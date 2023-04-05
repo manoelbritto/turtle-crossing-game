@@ -21,3 +21,4 @@ class Player(Turtle):
         self.setheading(UP)
         self.settiltangle(0)
         self.forward(MOVE_DISTANCE)
+
