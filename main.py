@@ -21,4 +21,5 @@ while game_is_on:
     screen.update()
     if player.ycor() > 280:
         scoreboard.game_ove()
+    car.create_car()
     car.move_car()
