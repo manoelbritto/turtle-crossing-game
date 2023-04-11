@@ -16,10 +16,21 @@ screen.listen()
 screen.onkey(player.up, "Up")
 
 game_is_on = True
+
 while game_is_on:
     time.sleep(0.1)
     screen.update()
     if player.ycor() > 280:
-        scoreboard.game_ove()
+        player.game_start()
+        car.level_up()
+        scoreboard.scoreboard_level()
+
     car.create_car()
     car.move_car()
+    for cars in car.all_cars:
+        if cars.distance(player) < 20:
+            game_is_on = False
+            scoreboard.game_over()
+
+
+screen.exitonclick()

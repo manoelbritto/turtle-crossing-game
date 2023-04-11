@@ -14,11 +14,10 @@ class Player(Turtle):
         self.game_start()
 
     def game_start(self):
-        self.settiltangle(90)
+        self.setheading(90)
         self.goto(STARTING_POSITION)
 
     def up(self):
         self.setheading(UP)
-        self.settiltangle(0)
         self.forward(MOVE_DISTANCE)
 
